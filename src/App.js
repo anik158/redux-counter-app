@@ -1,12 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import {useSelector, useDispatch} from 'react-redux';
-import { increment, decrement } from './actions';
+import { increment, decrement } from './features/counter/counterSlice';
 
 function App() {
 
-  const count = useSelector(state => state.count);
-
+    const count = useSelector(state => state.counter.count);
   const dispatch = useDispatch();
   return (
     <div className="App" style={{ textAlign: 'center', marginTop: '50px' }}>
